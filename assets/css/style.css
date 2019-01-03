@@ -1,0 +1,17 @@
+/*===Colors and Margins===*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*===Map Style===*/
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+
+#map {
+    height: 100%;
+}
+
