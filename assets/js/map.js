@@ -78,9 +78,11 @@ function initMap(){
             });
             
             //Add Listener event for InfoWindow when icon is clicked
-            marker.addListener('click', function(){
+            var myListener = marker.addListener('click', function(){
                 infoWindow.open(map, marker);
             });
+            
+            /*google.maps.event.removeListener(myListener);*/
         }
     }
 }
