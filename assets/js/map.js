@@ -4,8 +4,7 @@ var map;
 var markers = [];
 
 //Main list of all locations
-let locations = [
-    {
+let locations = [{
         country: 'Ireland',
         type: 'Restaurant',
         name: 'Saltee Chipper',
@@ -32,34 +31,266 @@ let locations = [
     {
         country: 'Ireland',
         type: 'Bar',
-        name: 'Kehoe\'s Pub & Parlour',
-        lat: 52.1751,
-        lng: -6.5869,
-        iconCustom: '/assets/images/map-icons/bar-icon.png'
+        name: 'Neville\'s Bar & Kitchen',
+        lat: 52.190840,
+        lng: -6.839256,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'Ireland',
+        type: 'Bar',
+        name: 'The Island Bar',
+        lat: 52.2101,
+        lng: -6.3804,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'Ireland',
+        type: 'Bar',
+        name: 'Meyler\'s Millhouse Bar & Restaurant',
+        lat: 52.2092,
+        lng: -6.4245,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Ireland',
         type: 'Hotel',
-        name: 'Coast Kilmore Quay',
-        lat: 52.1784,
-        lng: -6.5849,
-        iconCustom: 'assets/icons/hotel.png'
+        name: 'Seashells B+B',
+        lat: 52.220410,
+        lng: -6.931007,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Ireland',
         type: 'Hotel',
-        name: 'Mill Road Farm Self Catering Cottages',
-        lat: 52.1865,
-        lng: -6.5681,
-        iconCustom: 'assets/icons/hotel.png'
+        name: 'Kelly\'s Resort Hotel',
+        lat: 52.275537,
+        lng: -6.387682,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Ireland',
         type: 'Hotel',
-        name: 'Groveside Farm B&B',
-        lat: 52.2121,
-        lng: -6.5722,
-        iconCustom: 'assets/icons/hotel.png'
+        name: 'Kilderry CountryHouse',
+        lat: 52.274146,
+        lng: -6.713090,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'Ireland',
+        type: 'Attractions',
+        name: 'Saltee Island Great, Ireland',
+        lat: 52.119210,
+        lng: -6.615862,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'Ireland',
+        type: 'Attractions',
+        name: 'Colclough Walled Garden',
+        lat: 52.234456,
+        lng: -6.842257,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'Ireland',
+        type: 'Attractions',
+        name: 'Hook Lighthouse',
+        lat: 52.123763,
+        lng: -6.928994,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Restaurant',
+        name: 'The Soup Company',
+        lat: 63.419284,
+        lng: -19.017176,
+        iconCustom: '.../assets/images/map-icons/restaurant-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Restaurant',
+        name: 'Black Beach Restaurant',
+        lat: 63.404770,
+        lng: -19.040827,
+        iconCustom: '.../assets/images/map-icons/restaurant-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Restaurant',
+        name: 'Restaurant Sudur Vik',
+        lat: 63.422965,
+        lng: -19.005189,
+        iconCustom: '.../assets/images/map-icons/restaurant-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Bar',
+        name: 'Strondin Bistro and Bar',
+        lat: 63.418312,
+        lng: -18.994253,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Bar',
+        name: 'Halldorskaffi',
+        lat: 63.417997,
+        lng: -19.013819,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Bar',
+        name: 'Smiðjan Brugghús',
+        lat: 63.418028,
+        lng: -19.010272,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Hotel',
+        name: 'Skammidalur Guesthouse',
+        lat: 63.451145,
+        lng: -19.100789,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Hotel',
+        name: 'Black Beach Suites',
+        lat: 63.437207,
+        lng: -19.060917,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Hotel',
+        name: 'Hotel Kria',
+        lat: 63.418181,
+        lng: -18.993632,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Attractions',
+        name: 'Aurora Viewing Spot',
+        lat: 63.454367,
+        lng: -19.058494,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Attractions',
+        name: 'Dyrholaey',
+        lat: 63.407542,
+        lng: -19.127560,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'Iceland',
+        type: 'Attractions',
+        name: 'Black Sand Beach',
+        lat: 63.417212,
+        lng: -19.031345,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Restaurant',
+        name: 'Waitomo Clay Birds',
+        lat: -38.243659,
+        lng: 175.183439,
+        iconCustom: '.../assets/images/map-icons/restaurant-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Restaurant',
+        name: 'Waitomo Homestead',
+        lat: -38.243659,
+        lng: 175.183439,
+        iconCustom: '.../assets/images/map-icons/restaurant-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Restaurant',
+        name: 'Stoked Eatery',
+        lat: -38.335734,
+        lng: 175.166084,
+        iconCustom: '.../assets/images/map-icons/restaurant-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Bar',
+        name: 'Tomo Bar & Eatery',
+        lat: -38.260907,
+        lng: 175.108377,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Bar',
+        name: 'Otorohanga Club (Inc)',
+        lat: -38.188369,
+        lng: 175.210441,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Bar',
+        name: 'The Muster Bar - Te Kuiti',
+        lat: -38.333262,
+        lng: 175.165054,
+        iconCustom: '.../assets/images/map-icons/bar-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Hotel',
+        name: 'Woodlyn Park',
+        lat: -38.253138,
+        lng: 175.119341,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Hotel',
+        name: 'Waitomo Orchard B&B',
+        lat: -38.230557,
+        lng: 175.188821,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Hotel',
+        name: 'Waitomo Lodge',
+        lat: -38.325400,
+        lng: 175.153452,
+        iconCustom: '.../assets/images/map-icons/hotel-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Attractions',
+        name: 'Waitomo Glowworm Caves',
+        lat: -38.260767,
+        lng: 175.103614,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Attractions',
+        name: 'Hairy Feet Waitomo',
+        lat: -38.427656,
+        lng: 174.898447,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
+    },
+    {
+        country: 'New Zealand',
+        type: 'Attractions',
+        name: 'Marokopa Falls',
+        lat: -38.261450,
+        lng: 174.851896,
+        iconCustom: '.../assets/images/map-icons/tourist-attraction-icon.png'
     },
 ];
 
@@ -104,11 +335,11 @@ function initMap() {
             //Testing this if adding time delay for execution is possible
             //I will need something similar for clearing map markers
             /*google.maps.event.removeListener(myListener);*/
-            
+
             //If you click the marker, it will bounce.
             marker.addListener('click', toggleBounce);
         }
-        
+
         //Will make the marker bounce
         function toggleBounce() {
             //Means if it has animation,
