@@ -1,3 +1,14 @@
+//Declaring the map as a global variable
+var map;
+//Stores markers in an array
+var markers = [];
+
+//Main list of all locations
+let locations = [{
+    
+}];
+
+//Initialize Map
 function initMap(){
             //Map Options and Initial View
             var options = {
@@ -82,6 +93,8 @@ function initMap(){
                 infoWindow.open(map, marker);
             });
             
+            //Testing this if adding time delay for execution is possible
+            //I will need something similar for clearing map markers
             /*google.maps.event.removeListener(myListener);*/
         }
     }

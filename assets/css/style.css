@@ -35,6 +35,10 @@ body {
     width: 100%;
 }
 
+#container-carousel {
+    padding: 0;
+}
+
 /*===Media Queries===*/
 
 /*--iPad--*/
