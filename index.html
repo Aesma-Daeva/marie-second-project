@@ -59,12 +59,22 @@
         <div class="container">
             <h2>Choose your destination:</h2>
 
-            <div id="floating-panel">
-                <button id="drop" onclick="drop()">Show Markers</button>
+            <!--Country Selector -->
+            <!--Might have to change it later bootstrap 4 dropdown-->
+            <div class="container">
+                <select id="countrySelect">
+                  <option value="Ireland">Ireland</option>
+                  <option value="Iceland">Iceland</option>
+                  <option value="New Zealand">New Zealand</option>
+                </select>
             </div>
+            
+            <!--Button for drop animation, keep it for now-->
+            <!--<div id="floating-panel">-->
+            <!--    <button id="drop" onclick="drop()">Show Markers</button>-->
+            <!--</div>-->
 
             <!--Checkbox form for choosing what markers to show on the map-->
-
             <div class="container">
                 <div class="form-check-inline">
                     <label class="form-check-label">
@@ -88,6 +98,12 @@
                 </div>
             </div>
 
+            <!-- When button is clicked it will show selected map markers -->
+            <!-- Clear button doesn't work yet.-->
+            <div class="container">
+                <button id="buttonMarker" onclick="updateMarkers();">Show on Map</button>
+                <button id="buttonClear" onclick="deleteCheckmarks();">Clear Checkbox</button>
+            </div>
 
             <!--The Map-->
             <div class="container">
