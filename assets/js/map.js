@@ -297,50 +297,83 @@ let locations = [{
 //Initialize Map
 function initMap() {
     //Map Options and Initial View
-    var options = {
-        zoom: 10,
-        center: { lat: 52.175664, lng: -6.585877 } //Kilmore Quay, County Wexford
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 52.175664, lng: -6.585877 }, //Kilmore Quay, County Wexford
+        zoom: 10
+    });
+}
+
+//New Map
+var map = new google.maps.Map(document.getElementById('map'), options);
+
+//Add Markers Function
+function addMarker(props) {
+    var marker = new google.maps.Marker({
+        position: props.coords,
+        map: map,
+        icon: props.iconCustom,
+        animation: google.maps.Animation.DROP
+    });
+
+    //Check for custom icon
+    if (props.iconCustom) {
+        //Set icon image
+        marker.setIcon(props.iconCustom);
+    }
+
+    //Check content
+    if (props.content) {
+        var infoWindow = new google.maps.InfoWindow({
+            content: props.content
+        });
+
+        //Add Listener event for InfoWindow when icon is clicked
+        var myListener = marker.addListener('click', function() {
+            infoWindow.open(map, marker);
+        });
     }
 }
 
-    //New Map
-    var map = new google.maps.Map(document.getElementById('map'), options);
+//Update the marker on the map based on the selection from createMarkers function
+//then adds the icon on the map
+function updateMarkers() {
+    createMarkers();
+    for (var i = 0; i < markers.length; i++) {
+        //Add marker
+        addMarker(markers[i]);
+    }
+}
 
-    //Add Markers Function
-    function addMarker(props) {
-        var marker = new google.maps.Marker({
-            position: props.coords,
-            map: map,
-            icon: props.iconCustom,
-            animation: google.maps.Animation.DROP
+//Creates or makes the markers by narrowing it down to selected country and type
+//If user puts checkbox on all selected input types, all icons will show on the map
+function createMarkers() {
+
+    // Filter main list by country and will select all the items that belong to that country
+    let selectedLocations = locations.filter(function(obj) {
+        var selectedCountry = document.getElementById("countrySelect").value;
+        return obj.country === selectedCountry;
+    });
+
+    let resultlist = [];
+
+    // Will check if checkbox for hotels is enabled
+    // if the checkbox is enabled, add the list of hotels in selected country
+    if (document.getElementById("hotels").checked) {
+        let hotels = selectedLocations.filter(function(obj) {
+            return obj.type === "Hotel";
         });
-
-        //Check for custom icon
-        if (props.iconCustom) {
-            //Set icon image
-            marker.setIcon(props.iconCustom);
-        }
-
-        //Check content
-        if (props.content) {
-            var infoWindow = new google.maps.InfoWindow({
-                content: props.content,
-                maxWidth: 200
-            });
-
-            //Add Listener event for InfoWindow when icon is clicked
-            var myListener = marker.addListener('click', function() {
-                infoWindow.open(map, marker);
-            });
-
-            //Testing this if adding time delay for execution is possible
-            //I will need something similar for clearing map markers
-            /*google.maps.event.removeListener(myListener);*/
-
-            function updateMarkers() {
-                createMarkers();
-                for (var i = 0; i < markers.length; i++) {
-                    //Add marker
-                    addMarker(markers[i]);
-                }
-            }
+        resultlist = resultlist.concat(hotels);
+    }
+    
+    // Iterate through the resut list
+    for (var i = 0; i < resultlist.length; i++) {
+        markers.push({
+            coords: {
+                lat: resultlist[i].lat,
+                lng: resultlist[i].lng
+            },
+            iconCustom: resultlist[i].iconCustom,
+            content: resultlist[i].name
+        });
+    }
+}
