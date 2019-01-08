@@ -3,7 +3,7 @@ var map;
 //Stores markers in an array
 var markers = [];
 
-//Main list of all locations
+//====================Object Data of Locations to Show on the Map====================
 let locations = [{
         country: 'Ireland',
         type: 'Restaurant',
@@ -294,10 +294,10 @@ let locations = [{
     },
 ];
 
-//Initialize Map
+//====================Initialize Map====================
 function initMap() {
     //Map Options and Initial View
-    map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 61.514534, lng: -6.851611 }, //Streymoy, Faroe Islands
         zoom: 4,
         //If page body is bigger than map, it will be set to greedy.
@@ -309,9 +309,7 @@ function initMap() {
     });
 }
 
-//New Map
-// var map = new google.maps.Map(document.getElementById('map'), options);
-
+//====================Markers====================
 //Add Markers Function
 function addMarker(props) {
     var marker = new google.maps.Marker({
@@ -341,8 +339,11 @@ function addMarker(props) {
 }
 
 //Update the marker on the map based on the selection from createMarkers function
-//then adds the icon on the map
+//then adds the icon on the map once user clicks the "Show on Map" button
 function updateMarkers() {
+    //Added to make the map zoom in  to selected country
+    moveMap();
+    //Added to get the specified marker based on selected country and object type
     createMarkers();
     for (var i = 0; i < markers.length; i++) {
         //Add marker
@@ -350,6 +351,32 @@ function updateMarkers() {
     }
 }
 
+//====================Moving Map View to Selected Country====================
+//When user selects a country, and clicks button to show markers on the map,
+//the map view will zoom in to that selected country.
+function moveMap() {
+    var selectedCountry = document.getElementById("countrySelect").value;
+    if (selectedCountry === "Ireland") {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 52.175664, lng: -6.585877 }, //Ireland
+            zoom: 10
+        });
+    }
+    else if (selectedCountry === "Iceland") {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 63.436650, lng: -19.090795 }, //Iceland
+            zoom: 12
+        });
+    }
+    else {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: -38.260738, lng: 175.103404 }, //New Zealand
+            zoom: 11
+        });
+    }
+}
+
+//====================Start of Object Constructor for Markers====================
 //Creates or makes the markers by narrowing it down to selected country and type
 //If user puts checkbox on all selected input types, all icons will show on the map
 function createMarkers() {
@@ -359,7 +386,7 @@ function createMarkers() {
         var selectedCountry = document.getElementById("countrySelect").value;
         return obj.country === selectedCountry;
     });
-    
+
     //
     let resultlist = [];
 
@@ -371,7 +398,7 @@ function createMarkers() {
         });
         resultlist = resultlist.concat(hotels);
     }
-    
+
     // Will check if checkbox for restaurants is enabled
     // if the checkbox is enabled add the list of restaurants in selected country
     if (document.getElementById("restaurants").checked) {
@@ -398,7 +425,7 @@ function createMarkers() {
         });
         resultlist = resultlist.concat(attractions);
     }
-    
+
     // Iterate through the resut list
     for (var i = 0; i < resultlist.length; i++) {
         markers.push({
