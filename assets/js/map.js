@@ -297,7 +297,7 @@ let locations = [{
 //====================Initialize Map====================
 function initMap() {
     //Map Options and Initial View
-        map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 61.514534, lng: -6.851611 }, //Streymoy, Faroe Islands
         zoom: 4,
         //If gestureHandling is set to auto:
@@ -371,8 +371,8 @@ function moveMap() {
             break;
         case 'New Zealand':
             map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -38.260738, lng: 175.103404 }, //New Zealand
-                zoom: 11
+                center: { lat: -38.414427, lng: 175.107789 }, //New Zealand
+                zoom: 8
             });
             break;
         default:
@@ -462,4 +462,10 @@ function createMarkers() {
             content: resultlist[i].name
         });
     }
+}
+
+//====================Clear Button====================
+function deleteCheckmarks() {
+    var checkmarks = document.getElementsByTagName("input");
+for (var i = 0; i < checkmarks.length; ++i) { checkmarks[i].checked = false; }
 }

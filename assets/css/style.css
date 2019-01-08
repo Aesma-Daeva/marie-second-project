@@ -11,7 +11,7 @@ body {
 * element that contains the map. */
 
 #map {
-    height: 100%;
+    height: 500px;
     width: 100%;
 }
 

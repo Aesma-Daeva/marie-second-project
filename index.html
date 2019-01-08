@@ -97,12 +97,12 @@
                     </label>
                 </div>
             </div>
-
+            
+            <!-- Buttons -->
             <!-- When button is clicked it will show selected map markers -->
-            <!-- Clear button doesn't work yet.-->
             <div class="container">
                 <button id="buttonMarker" onclick="updateMarkers();">Show on Map</button>
-                <button id="buttonClear" onclick="deleteCheckmarks();">Clear Checkbox</button>
+                <button id="buttonClear" onclick="deleteCheckmarks();">Clear Checks</button>
             </div>
 
             <!--The Map-->
@@ -124,5 +124,4 @@
     <!-- Google Map API needs to load first so the map works -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAS6iGKgURPqYWfkWtCq0Iu6pLHtxneimM&callback=initMap"></script>
 </main>
-
 </html>
