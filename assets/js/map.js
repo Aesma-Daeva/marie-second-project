@@ -300,12 +300,13 @@ function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 61.514534, lng: -6.851611 }, //Streymoy, Faroe Islands
         zoom: 4,
+        //If gestureHandling is set to auto:
         //If page body is bigger than map, it will be set to greedy.
         //you can easily zoom and drag the map.
         //If page body is smaller than map like in mobile devices,
         //it is set to 'cooperative' so the map doesn't get moved when user
         //needs to scroll down.
-        gestureHandling: 'auto'
+        gestureHandling: 'greedy'
     });
 }
 
@@ -355,26 +356,50 @@ function updateMarkers() {
 //When user selects a country, and clicks button to show markers on the map,
 //the map view will zoom in to that selected country.
 function moveMap() {
-    var selectedCountry = document.getElementById("countrySelect").value;
-    if (selectedCountry === "Ireland") {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 52.175664, lng: -6.585877 }, //Ireland
-            zoom: 10
-        });
-    }
-    else if (selectedCountry === "Iceland") {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 63.436650, lng: -19.090795 }, //Iceland
-            zoom: 12
-        });
-    }
-    else {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: -38.260738, lng: 175.103404 }, //New Zealand
-            zoom: 11
-        });
+    switch (document.getElementById("countrySelect").value) {
+        case 'Ireland':
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 52.175664, lng: -6.585877 }, //Ireland
+                zoom: 10
+            });
+            break;
+        case 'Iceland':
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 63.436650, lng: -19.090795 }, //Iceland
+                zoom: 12
+            });
+            break;
+        case 'New Zealand':
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -38.260738, lng: 175.103404 }, //New Zealand
+                zoom: 11
+            });
+            break;
+        default:
     }
 }
+
+// function moveMap() {
+//     var selectedCountry = document.getElementById("countrySelect").value;
+//     if (selectedCountry === "Ireland") {
+//         map = new google.maps.Map(document.getElementById('map'), {
+//             center: { lat: 52.175664, lng: -6.585877 }, //Ireland
+//             zoom: 10
+//         });
+//     }
+//     else if (selectedCountry === "Iceland") {
+//         map = new google.maps.Map(document.getElementById('map'), {
+//             center: { lat: 63.436650, lng: -19.090795 }, //Iceland
+//             zoom: 12
+//         });
+//     }
+//     else {
+//         map = new google.maps.Map(document.getElementById('map'), {
+//             center: { lat: -38.414427, lng: 175.107789 }, //New Zealand
+//             zoom: 8
+//         });
+//     }
+// }
 
 //====================Start of Object Constructor for Markers====================
 //Creates or makes the markers by narrowing it down to selected country and type
