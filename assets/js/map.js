@@ -299,7 +299,13 @@ function initMap() {
     //Map Options and Initial View
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 61.514534, lng: -6.851611 }, //Streymoy, Faroe Islands
-        zoom: 4
+        zoom: 4,
+        //If page body is bigger than map, it will be set to greedy.
+        //you can easily zoom and drag the map.
+        //If page body is smaller than map like in mobile devices,
+        //it is set to 'cooperative' so the map doesn't get moved when user
+        //needs to scroll down.
+        gestureHandling: 'auto'
     });
 }
 
@@ -353,7 +359,8 @@ function createMarkers() {
         var selectedCountry = document.getElementById("countrySelect").value;
         return obj.country === selectedCountry;
     });
-
+    
+    //
     let resultlist = [];
 
     // Will check if checkbox for hotels is enabled
