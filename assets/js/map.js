@@ -298,13 +298,13 @@ let locations = [{
 function initMap() {
     //Map Options and Initial View
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 52.175664, lng: -6.585877 }, //Kilmore Quay, County Wexford
-        zoom: 10
+        center: { lat: 61.514534, lng: -6.851611 }, //Streymoy, Faroe Islands
+        zoom: 4
     });
 }
 
 //New Map
-var map = new google.maps.Map(document.getElementById('map'), options);
+// var map = new google.maps.Map(document.getElementById('map'), options);
 
 //Add Markers Function
 function addMarker(props) {
@@ -363,6 +363,33 @@ function createMarkers() {
             return obj.type === "Hotel";
         });
         resultlist = resultlist.concat(hotels);
+    }
+    
+    // Will check if checkbox for restaurants is enabled
+    // if the checkbox is enabled add the list of restaurants in selected country
+    if (document.getElementById("restaurants").checked) {
+        let restaurants = selectedLocations.filter(function(obj) {
+            return obj.type === "Restaurant";
+        });
+        resultlist = resultlist.concat(restaurants);
+    }
+
+    // Will check if checkbox for bars is enabled
+    // if the checkbox is enabled add the list of bars in selected country
+    if (document.getElementById("bars").checked) {
+        let bars = selectedLocations.filter(function(obj) {
+            return obj.type === "Bar";
+        });
+        resultlist = resultlist.concat(bars);
+    }
+
+    // Will check if checkbox for tourist attractions is enabled
+    // if the checkbox is enabled add the list of attractions in selected country
+    if (document.getElementById("attractions").checked) {
+        let attractions = selectedLocations.filter(function(obj) {
+            return obj.type === "Attractions";
+        });
+        resultlist = resultlist.concat(attractions);
     }
     
     // Iterate through the resut list
