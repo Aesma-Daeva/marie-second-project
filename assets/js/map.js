@@ -10,7 +10,7 @@ let locations = [{
         name: 'Saltee Chipper',
         lat: 52.1729,
         lng: -6.5897,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'Ireland',
@@ -18,7 +18,7 @@ let locations = [{
         name: 'Lobster Pot',
         lat: 52.198706,
         lng: -6.374228,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'Ireland',
@@ -26,7 +26,7 @@ let locations = [{
         name: 'Templars Inn',
         lat: 52.180259,
         lng: -6.894808,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'Ireland',
@@ -34,7 +34,7 @@ let locations = [{
         name: 'Neville\'s Bar & Kitchen',
         lat: 52.190840,
         lng: -6.839256,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Ireland',
@@ -42,7 +42,7 @@ let locations = [{
         name: 'The Island Bar',
         lat: 52.2101,
         lng: -6.3804,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Ireland',
@@ -50,7 +50,7 @@ let locations = [{
         name: 'Meyler\'s Millhouse Bar & Restaurant',
         lat: 52.2092,
         lng: -6.4245,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Ireland',
@@ -58,7 +58,7 @@ let locations = [{
         name: 'Seashells B+B',
         lat: 52.220410,
         lng: -6.931007,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Ireland',
@@ -66,7 +66,7 @@ let locations = [{
         name: 'Kelly\'s Resort Hotel',
         lat: 52.275537,
         lng: -6.387682,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Ireland',
@@ -74,7 +74,7 @@ let locations = [{
         name: 'Kilderry CountryHouse',
         lat: 52.274146,
         lng: -6.713090,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Ireland',
@@ -82,7 +82,7 @@ let locations = [{
         name: 'Saltee Island Great, Ireland',
         lat: 52.119210,
         lng: -6.615862,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'Ireland',
@@ -90,7 +90,7 @@ let locations = [{
         name: 'Colclough Walled Garden',
         lat: 52.234456,
         lng: -6.842257,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'Ireland',
@@ -98,7 +98,7 @@ let locations = [{
         name: 'Hook Lighthouse',
         lat: 52.123763,
         lng: -6.928994,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'Iceland',
@@ -106,7 +106,7 @@ let locations = [{
         name: 'The Soup Company',
         lat: 63.419284,
         lng: -19.017176,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'Iceland',
@@ -114,7 +114,7 @@ let locations = [{
         name: 'Black Beach Restaurant',
         lat: 63.404770,
         lng: -19.040827,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'Iceland',
@@ -122,7 +122,7 @@ let locations = [{
         name: 'Restaurant Sudur Vik',
         lat: 63.422965,
         lng: -19.005189,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'Iceland',
@@ -130,7 +130,7 @@ let locations = [{
         name: 'Strondin Bistro and Bar',
         lat: 63.418312,
         lng: -18.994253,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Iceland',
@@ -138,7 +138,7 @@ let locations = [{
         name: 'Halldorskaffi',
         lat: 63.417997,
         lng: -19.013819,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Iceland',
@@ -146,7 +146,7 @@ let locations = [{
         name: 'Smiðjan Brugghús',
         lat: 63.418028,
         lng: -19.010272,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'Iceland',
@@ -154,7 +154,7 @@ let locations = [{
         name: 'Skammidalur Guesthouse',
         lat: 63.451145,
         lng: -19.100789,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Iceland',
@@ -162,7 +162,7 @@ let locations = [{
         name: 'Black Beach Suites',
         lat: 63.437207,
         lng: -19.060917,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Iceland',
@@ -170,7 +170,7 @@ let locations = [{
         name: 'Hotel Kria',
         lat: 63.418181,
         lng: -18.993632,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'Iceland',
@@ -178,7 +178,7 @@ let locations = [{
         name: 'Aurora Viewing Spot',
         lat: 63.454367,
         lng: -19.058494,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'Iceland',
@@ -186,7 +186,7 @@ let locations = [{
         name: 'Dyrholaey',
         lat: 63.407542,
         lng: -19.127560,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'Iceland',
@@ -194,7 +194,7 @@ let locations = [{
         name: 'Black Sand Beach',
         lat: 63.417212,
         lng: -19.031345,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'New Zealand',
@@ -202,7 +202,7 @@ let locations = [{
         name: 'Waitomo Clay Birds',
         lat: -38.243659,
         lng: 175.183439,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'New Zealand',
@@ -210,7 +210,7 @@ let locations = [{
         name: 'Waitomo Homestead',
         lat: -38.243659,
         lng: 175.183439,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'New Zealand',
@@ -218,7 +218,7 @@ let locations = [{
         name: 'Stoked Eatery',
         lat: -38.335734,
         lng: 175.166084,
-        iconCustom: '../assets/images/map-icons/restaurant-icon.png'
+        iconCustom: './assets/images/map-icons/restaurant-icon.png'
     },
     {
         country: 'New Zealand',
@@ -226,7 +226,7 @@ let locations = [{
         name: 'Tomo Bar & Eatery',
         lat: -38.260907,
         lng: 175.108377,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'New Zealand',
@@ -234,7 +234,7 @@ let locations = [{
         name: 'Otorohanga Club (Inc)',
         lat: -38.188369,
         lng: 175.210441,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'New Zealand',
@@ -242,7 +242,7 @@ let locations = [{
         name: 'The Muster Bar - Te Kuiti',
         lat: -38.333262,
         lng: 175.165054,
-        iconCustom: '../assets/images/map-icons/bar-icon.png'
+        iconCustom: './assets/images/map-icons/bar-icon.png'
     },
     {
         country: 'New Zealand',
@@ -250,7 +250,7 @@ let locations = [{
         name: 'Woodlyn Park',
         lat: -38.253138,
         lng: 175.119341,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'New Zealand',
@@ -258,7 +258,7 @@ let locations = [{
         name: 'Waitomo Orchard B&B',
         lat: -38.230557,
         lng: 175.188821,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'New Zealand',
@@ -266,7 +266,7 @@ let locations = [{
         name: 'Waitomo Lodge',
         lat: -38.325400,
         lng: 175.153452,
-        iconCustom: '../assets/images/map-icons/hotel-icon.png'
+        iconCustom: './assets/images/map-icons/hotel-icon.png'
     },
     {
         country: 'New Zealand',
@@ -274,7 +274,7 @@ let locations = [{
         name: 'Waitomo Glowworm Caves',
         lat: -38.260767,
         lng: 175.103614,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'New Zealand',
@@ -282,7 +282,7 @@ let locations = [{
         name: 'Hairy Feet Waitomo',
         lat: -38.427656,
         lng: 174.898447,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
     {
         country: 'New Zealand',
@@ -290,7 +290,7 @@ let locations = [{
         name: 'Marokopa Falls',
         lat: -38.261450,
         lng: 174.851896,
-        iconCustom: '../assets/images/map-icons/tourist-attraction-icon.png'
+        iconCustom: './assets/images/map-icons/tourist-attraction-icon.png'
     },
 ];
 
